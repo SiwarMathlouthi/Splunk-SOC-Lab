@@ -64,47 +64,6 @@ Configured port:
 
 Port `9997` is used by Splunk Universal Forwarder to send logs from endpoints to the Splunk Enterprise server.
 
-## Step 4 - Verification
+The screenshot below confirms that Splunk Enterprise is listening on port `9997` and that the status is enabled.
 
-After enabling the receiving port, Splunk became ready to receive logs from Windows and Linux endpoints.
-
-Expected log flow:
-
-```text
-Endpoint Logs
-   |
-   v
-Splunk Universal Forwarder
-   |
-   | TCP 9997
-   v
-Splunk Enterprise Server
-```
-
-## Security Relevance
-
-Activating the receiving port is an important SIEM deployment step.
-
-Without this configuration, endpoint logs cannot be centralized in Splunk. This would prevent the SOC analyst from investigating events such as failed logins, brute-force attempts, process execution, and system activity from one central platform.
-
-## Evidence
-
-Screenshots to include:
-
-| Screenshot Name | Description |
-|---|---|
-| `splunk-web-interface.png` | Splunk web interface accessible |
-| `splunk-forwarding-receiving-menu.png` | Forwarding and receiving page |
-| `splunk-receiving-port-9997.png` | Receiving port 9997 enabled |
-
-Screenshots should be saved in:
-
-```text
-01-Splunk-Deployment/images/
-```
-
-## Outcome
-
-Splunk Enterprise was successfully deployed as the central SIEM server.
-
-Receiving on TCP port `9997` was enabled, allowing the lab to move to the next phase: installing and configuring Splunk Universal Forwarder on monitored endpoints.
+![Splunk receiving port 9997 enabled](images/splunk-receiving-port-9997.png)
