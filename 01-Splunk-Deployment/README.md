@@ -66,4 +66,4 @@ Port `9997` is used by Splunk Universal Forwarder to send logs from endpoints to
 
 The screenshot below confirms that Splunk Enterprise is listening on port `9997` and that the status is enabled.
 
-![Splunk receiving port 9997 enabled](images/splunk-receiving-port-9997-final.png)
+![Splunk receiving port 9997 enabled](images/splunk-receiving-port-9997-redacted-v2.png)
